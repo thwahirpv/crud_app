@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Form = ({url, role}) => {
     let title = role === "register" ? 'Register' : role === "login" ? "Login" : "Create User";
+    const [formData, setFormData] = useState({username: '', email: '', password: ''})
+
+    const handleFormChange = (e) => {
+        setFormData({...formData, [e.target.name]: e.target.value})
+    }
+    
 
     return (
         <div className='w-full h-screen bg-gradient-to-r from-slate-50 to-sky-100 flex justify-center items-center'>
@@ -10,10 +16,19 @@ const Form = ({url, role}) => {
             <h1 className='text-slate-900 font-bold text-xl md:text-2xl text-center'>{title}</h1>
             <form className='w-full flex flex-col p-10' action="">
                 <div className='space-y-5 w-full'>
-                    <input 
+                    <input
+                    onChange={handleFormChange}
+                    name='username' 
                     className='py-3 px-3 rounded w-full outline-none text-slate-900'               
                     type="text" placeholder='Username' />
-                    <input 
+                    <input
+                    onChange={handleFormChange}
+                    name='email' 
+                    className='py-3 px-3 rounded w-full outline-none text-slate-900'               
+                    type="text" placeholder='Email' />
+                    <input
+                    onChange={handleFormChange}
+                    name='password' 
                     className='py-3 px-3 rounded w-full outline-none text-slate-900'
                     type="password" placeholder='Password' />
                     </div>

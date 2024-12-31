@@ -1,0 +1,28 @@
+env
+
+
+# Frontend
+**/node_modules
+# Logs
+**/s
+**/og
+**/-debug.log*
+**/n-debug.log*
+**/n-error.log*
+**/m-debug.log*
+**/na-debug.log*
+**/t
+**/t-ssr
+**/ocal
+**/code/*
+**/scode/extensions.json
+**/ea
+**/_Store
+**/uo
+**/tvs*
+**/jsproj
+**/ln
+**/w?
+
+# Backend
+**/db.sqlite3

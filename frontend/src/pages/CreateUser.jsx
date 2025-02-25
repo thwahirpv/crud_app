@@ -7,7 +7,7 @@ const CreateUser = () => {
     <>
         <NavBar />
         <div>
-            <Form url="/" role='create' />
+            <Form role='create' />
         </div>
     </>
   )
